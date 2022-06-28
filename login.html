@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 style="color:blue;text-align:center ;">login form</h1>
+<label for="text">UserName:</label>
+<input type="text" id="tt"  name="text" required =" color:rgb(27, 39, 39);" placeholder="Enter user name" ><br> <br>
+<label for="pass" >password:</label>
+<input type="password" id="pass" name="pass"  placeholder="enter yor pass" required><br><br><nbsp></nbsp>
+
+
+<button  onclick="myFunction()" id ="btn">Submit</button>
+<script>
+function myFunction() {
+    if(document.getElementById("tt").value=="amit"&& document.getElementById("pass").value==="pal" ){
+        location.href=("index.html");
+    }else{
+        alert("wrong input")
+    }
+
+}
+
+
+
+
+// const user =document.getElementById("text");
+// const passs=document.getElementById("pass");
+// const button =document.getElementById("btn");
+// if(user!=="amit" && passs !=="amit123"){
+//     return false
+//     document.getElementById("text").innerHTML=("jai ho")
+// }
+ </script>
+
+</body>   
+</html>

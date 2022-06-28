@@ -1,0 +1,57 @@
+<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="fil" style="color:green;text-align:center;background-color: aliceblue;">Fill Details</h1>
+    <form action="https://sheetdb.io/api/v1/3cpq17man7011" method="post"  id="sheet-db">
+        <label for="FirstName">First-name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lastname">Last-name:</label>
+        <input type="text" id="lname"required name="lname"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Age: <input type="number" id="age" name="age"><br><br>
+        Gender: male-<input type="radio" name="gender" id="gender">
+        female-<input type="radio" name="gender" id="gen2"><br><br>
+        Email: <input type="email" name="email" id="em"><br><br>
+        Birth: date <input type="date" name="birth" id="birth"><br><br>
+        faviorate food:
+        banana: <input type="checkbox" name="banana" id="bana"><br>
+        apple: <input type="checkbox" name="kela" id="app"><br><br>
+        eye-color: <select name="eye-color" id="eye-color">
+            <option  label=" Select " value=" "></option>
+            <option value="green">green</option>
+            <option value="Red">red</option>
+        </select><br><br>
+        bio: <textarea name="" id="text" cols="30" rows="10"></textarea><br><br><br>
+
+        File: <input type="file" type="file" name=""><br><br>
+
+        phone: <input type="tel" name=""><br><br><br>
+        color: <input type="color" name="color"><br><br>
+        url: <input type="url" name=""><br><br>
+        <button type="submit" text-align="center">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+<script>
+var form=document.getElementById("sheet-db");
+form.addEventListener("submit",e=>{
+    e.preventDefault();
+    fetch(from.action,{
+        method:"POST",
+        body:new FormData(document.getElementById("sheet-db")),
+    }).then(
+        response=>response.json()
+    ).then((html) => {
+    window.open('ram.html', '_blank' );
+    });
+    
+});
+</script>
+</body>
+</html>
